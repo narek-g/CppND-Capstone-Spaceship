@@ -38,6 +38,18 @@ Renderer::~Renderer() {
   SDL_Quit();
 }
 
+void Renderer::drawBlackHole(int centerX, int centerY, int radius){
+  SDL_SetRenderDrawColor(sdl_renderer, 255, 255, 255, 255); 
+  // Draw Black Hole 
+  for(int x = centerX - radius; x<=centerX+radius; x++){
+    for(int y = centerY - radius; y <= centerY + radius; y++){
+      if( (std::pow(centerY - y,2) + std::pow(centerX - x, 2)) <= std::pow(radius, 2)){ 
+        SDL_RenderDrawPoint(sdl_renderer, x, y);
+      }
+    }
+  }
+}
+
 void Renderer::Render(Snake const snake, SDL_Point const &food) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
@@ -70,6 +82,14 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
     SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
   }
   SDL_RenderFillRect(sdl_renderer, &block);
+
+  // Render Black holes
+  Renderer::drawBlackHolee(480, 160, 30); // one
+  Renderer::drawBlackHolee(160, 320, 30); // two
+  Renderer::drawBlackHolee(480, 480, 30); // three
+
+  // Render SpaceShip 
+
 
   // Update Screen
   SDL_RenderPresent(sdl_renderer);
