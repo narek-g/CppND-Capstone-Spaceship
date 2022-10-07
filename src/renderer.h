@@ -5,7 +5,6 @@
 #include "SDL.h"
 #include "snake.h"
 #include "black_hole.h" 
-#include "black_hole.cpp"
 
 class Renderer {
  public:
