@@ -13,7 +13,7 @@ class Renderer {
   ~Renderer();
   void drawBlackHole(int centerX, int centerY, int radius);
 
-  void Render(Snake const snake, BlackHole const blackHole, SDL_Point const &food);
+  void Render(Snake const snake, BlackHole blackHole, SDL_Point const &food);
   void UpdateWindowTitle(int score, int fps);
 
  private:
