@@ -1,8 +1,6 @@
-#ifndef BLACK_HOLE_H
-#define BLACK_HOLE_H
+#ifndef BLACKHOLE_H
+#define BLACKHOLE_H
 
-#include <vector> 
-#include "SDL.h"
 
 class BlackHole {
  public:
