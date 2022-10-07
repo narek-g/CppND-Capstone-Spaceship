@@ -7,7 +7,7 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)) {
-  PlaceFood();
+  // PlaceFood();
 }
 
 void Game::Run(Controller const &controller, Renderer &renderer,
@@ -34,8 +34,8 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     frame_count++;
     frame_duration = frame_end - frame_start;
 
-    // After every second, update the window title.
-    if (frame_end - title_timestamp >= 1000) {
+    // After every helf second, update the window title.
+    if (frame_end - title_timestamp >= 500) {
       renderer.UpdateWindowTitle(score, frame_count);
       frame_count = 0;
       title_timestamp = frame_end;
@@ -50,20 +50,20 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   }
 }
 
-void Game::PlaceFood() {
-  int x, y;
-  while (true) {
-    x = random_w(engine);
-    y = random_h(engine);
-    // Check that the location is not occupied by a snake item before placing
-    // food.
-    if (!snake.SnakeCell(x, y)) {
-      food.x = x;
-      food.y = y;
-      return;
-    }
-  }
-}
+// void Game::PlaceFood() {
+//   int x, y;
+//   while (true) {
+//     x = random_w(engine);
+//     y = random_h(engine);
+//     // Check that the location is not occupied by a snake item before placing
+//     // food.
+//     if (!snake.SnakeCell(x, y)) {
+//       food.x = x;
+//       food.y = y;
+//       return;
+//     }
+//   }
+// }
 
 void Game::Update() {
   if (!snake.alive) return;
@@ -76,9 +76,9 @@ void Game::Update() {
   // Check if there's food over here
   if (food.x == new_x && food.y == new_y) {
     score++;
-    PlaceFood();
+    // PlaceFood();
     // Grow snake and increase speed.
-    snake.GrowBody();
+    // snake.GrowBody();
     snake.speed += 0.02;
   }
 }
