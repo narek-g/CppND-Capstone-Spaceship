@@ -34,7 +34,3 @@ void BlackHole::getGravitationalPull(float &Fx, float &Fy, int x, int y) {
     Fx = BH1Fx + BH2Fx + BH3Fx; 
     Fy = BH1Fy + BH2Fy + BH3Fy; 
 }
-
-void BlackHole::something(){
-    std::cout << "Hello \n"; 
-}

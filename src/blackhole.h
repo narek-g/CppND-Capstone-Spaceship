@@ -22,7 +22,9 @@ class BlackHole {
     int BHradius; 
 
     void getGravitationalPull(float &Fx, float &Fy, int x, int y); 
-    void something(); 
+    void something(){
+      std::cout << "Hello \n"; 
+    }
 
  private:
     // expanding ? 
