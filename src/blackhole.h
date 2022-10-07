@@ -55,10 +55,10 @@ class BlackHole {
     float M{1e10};
     float m{1e3};
 
-    radiusSquared = (BHx - x)**2 + (BHy - y)**2 ; 
+    radiusSquared = pow((BHx - x),2) + pow((BHy - y),2) ; 
     F = (G*M*m)/radiusSquared;
-    Fx = F*cos(atan2((BHy - y)/(BHx - x))); 
-    Fy = F*sin(atan2((BHy - y)/(BHx - x))); 
+    Fx = F*cos(atan2((BHy - y),(BHx - x))); 
+    Fy = F*sin(atan2((BHy - y),(BHx - x))); 
    }
 };
 
