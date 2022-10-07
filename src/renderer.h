@@ -25,8 +25,8 @@ class Renderer {
   const std::size_t grid_width;
   const std::size_t grid_height;
 
-  float BHFx; 
-  float BHFy; 
+  // float BHFx; 
+  // float BHFy; 
 };
 
 #endif
