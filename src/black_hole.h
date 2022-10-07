@@ -22,8 +22,8 @@ class BlackHole {
     int BHmass; 
     int BHradius; 
 
-    void getGravitationalPull(float Fx, float Fy, int x, int y); 
- 
+    void getGravitationalPull(float &Fx, float &Fy, int x, int y); 
+    void something(); 
 
  private:
     // expanding ? 
