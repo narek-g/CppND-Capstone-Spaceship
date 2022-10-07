@@ -22,13 +22,13 @@ class BlackHole {
     int BHmass; 
     int BHradius; 
 
-    void getGravitationalPull(BlackHole blackHole, int &Fx, int &Fy, int x, int y); 
+    void getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, int x, int y); 
  
 
  private:
     // expanding ? 
     // void expanding(bool isExpanding); 
-    void computeForce(int &Fx, int &Fy, int x, int y, int BHx, int BHy); 
+    void computeForce(float &Fx, float &Fy, int x, int y, int BHx, int BHy); 
 };
 
 #endif
