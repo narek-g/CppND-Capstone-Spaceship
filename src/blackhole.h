@@ -22,7 +22,7 @@ class BlackHole {
     int BHmass; 
     int BHradius; 
 
-    void getGravitationalPull(float &Fx, float &Fy, int x, int y){ 
+    void getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, int x, int y){ 
     // black hole 1 
     float BH1Fx{0}; // update by reference in computeForece
     float BH1Fy{0}; // update by reference in computeForce 
