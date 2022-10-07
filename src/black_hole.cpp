@@ -19,7 +19,7 @@ void BlackHole::getGravitationalPull(BlackHole blackHole, int &Fx, int &Fy, int 
     // black hole 1 
     int BH1Fx{0}; 
     int BH1Fy{0}; 
-    BlackHole::computeForce(BH1Fx, BH1Fy, x, y, blackHole.BH1x, blackHole.BH1y); 
+    BlackHole::computeForce(BH1Fx, BH1Fy, x, y, blackHole.BH1x, BH1y); 
 
     // black hole 2
 
