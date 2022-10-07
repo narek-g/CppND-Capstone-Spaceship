@@ -50,7 +50,7 @@ void Renderer::drawBlackHole(int centerX, int centerY, int radius){
   }
 }
 
-void Renderer::Render(Snake const snake, SDL_Point const &food) {
+void Renderer::Render(Snake const snake, BlackHole const blackHole, SDL_Point const &food) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
@@ -84,7 +84,7 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
   // SDL_RenderFillRect(sdl_renderer, &block);
 
   // Render Black holes
-  Renderer::drawBlackHole(BlackHole.BH1x, BlackHole.BH1y, BlackHole.BHradius); // one
+  Renderer::drawBlackHole(blackHole.BH1x, blackHole.BH1y, blackHole.BHradius); // one
   Renderer::drawBlackHole(160, 320, 50); // two
   Renderer::drawBlackHole(480, 480, 50); // three
 
