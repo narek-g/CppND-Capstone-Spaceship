@@ -2,6 +2,7 @@
 #define BLACKHOLE_H
 
 #include <iostream>
+#include "SDL.h"
 
 class BlackHole {
  public:

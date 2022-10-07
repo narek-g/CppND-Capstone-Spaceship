@@ -1,4 +1,5 @@
 #include "blackhole.h"
+#include "SDL.h"
 #include <cmath> 
 
 
