@@ -22,7 +22,7 @@ class BlackHole {
     int BHmass; 
     int BHradius; 
 
-    void BlackHole::getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, int x, int y); 
+    void getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, int x, int y); 
  
 
  private:
