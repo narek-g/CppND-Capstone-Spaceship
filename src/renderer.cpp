@@ -84,7 +84,7 @@ void Renderer::Render(Snake const snake, SDL_Point const &food) {
   // SDL_RenderFillRect(sdl_renderer, &block);
 
   // Render Black holes
-  Renderer::drawBlackHole(480, 160, 50); // one
+  Renderer::drawBlackHole(BH1x, BH1y, BHradius); // one
   Renderer::drawBlackHole(160, 320, 50); // two
   Renderer::drawBlackHole(480, 480, 50); // three
 
