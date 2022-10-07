@@ -1,5 +1,5 @@
-// #ifndef BLACKHOLE_H
-// #define BLACKHOLE_H
+#ifndef BLACKHOLE_H
+#define BLACKHOLE_H
 
 #include <iostream>
 
@@ -33,4 +33,4 @@ class BlackHole {
     void computeForce(float &Fx, float &Fy, int x, int y, int BHx, int BHy);
 };
 
-// #endif
+#endif
