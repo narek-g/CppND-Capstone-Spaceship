@@ -48,7 +48,18 @@ class BlackHole {
  private:
     // expanding ? 
     // void expanding(bool isExpanding); 
-    void computeForce(float &Fx, float &Fy, int x, int y, int BHx, int BHy); 
+    void computeForce(float &Fx, float &Fy, int x, int y, int BHx, int BHy){
+    float radiusSquared; 
+    float G{6.67e-11}; 
+    float F; 
+    float M{1e10};
+    float m{1e3};
+
+    radiusSquared = (BHx - x)**2 + (BHy - y)**2 ; 
+    F = (G*M*m)/radiusSquared;
+    Fx = F*cos(atan2((BHy - y)/(BHx - x))); 
+    Fy = F*sin(atan2((BHy - y)/(BHx - x))); 
+   }
 };
 
 #endif
