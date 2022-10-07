@@ -85,8 +85,8 @@ void Renderer::Render(Snake const snake, BlackHole const blackHole, SDL_Point co
 
   // Render Black holes
   Renderer::drawBlackHole(blackHole.BH1x, blackHole.BH1y, blackHole.BHradius); // one
-  Renderer::drawBlackHole(160, 320, 50); // two
-  Renderer::drawBlackHole(480, 480, 50); // three
+  Renderer::drawBlackHole(blackHole.BH2x, blackHole.BH2y, blackHole.BHradius); // two
+  Renderer::drawBlackHole(blackHole.BH3x, blackHole.BH3y, blackHole.BHradius); // three
 
   // Render SpaceShip (it's a square, for now)
   block.x = static_cast<int>(snake.head_x) * block.w;

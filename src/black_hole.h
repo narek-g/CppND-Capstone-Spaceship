@@ -13,6 +13,12 @@ class BlackHole {
     BHradius(50) {}
 
     // location and sizing in pixel space
+    
+ 
+
+ private:
+    // expanding ? 
+    // void expanding(bool isExpanding); 
     int BH1x; 
     int BH1y; 
     int BH2x; 
@@ -21,11 +27,6 @@ class BlackHole {
     int BH3y; 
     int BHmass; 
     int BHradius; 
- 
-
- private:
-    // expanding ? 
-    // void expanding(bool isExpanding); 
 };
 
 #endif
