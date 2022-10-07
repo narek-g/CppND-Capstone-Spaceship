@@ -94,7 +94,7 @@ void Renderer::Render(Snake const snake, BlackHole const blackHole, SDL_Point co
   block.x = static_cast<int>(snake.head_x) * block.w;
   block.y = static_cast<int>(snake.head_y) * block.h;
 
-  static BlackHole::getGravitationalPull(blackHole, BHFx, BHFy, block.x, block.y);
+  BlackHole::getGravitationalPull(BlackHole blackHole, BHFx, BHFy, block.x, block.y);
 
   if (snake.alive) {
     SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
