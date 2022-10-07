@@ -11,6 +11,8 @@ void BlackHole::computeForce(int &Fx, int &Fy, int x, int y, int BHx, int BHy){
 
     radiusSquared = (BHx - x)**2 + (BHy - y)**2 ; 
     F = (G*M*m)/radiusSquared;
+    Fx = F*cos(atan2((BHy - y)/(BHx - x))); 
+    Fy = F*sin(atan2((BHy - y)/(BHx - x))); 
 }
 
 void BlackHole::getGravitationalPull(BlackHole blackHole, int &Fx, int &Fy, int x, int y){ 
