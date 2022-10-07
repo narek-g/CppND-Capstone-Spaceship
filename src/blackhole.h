@@ -2,7 +2,6 @@
 #define BLACKHOLE_H
 
 #include <iostream>
-#include "renderer.h"
 
 class BlackHole {
  public:
