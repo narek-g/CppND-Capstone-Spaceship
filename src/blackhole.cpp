@@ -9,13 +9,13 @@ void BlackHole::computeForce(float &Fx, float &Fy, int x, int y, int BHx, int BH
     float M{1e10};
     float m{1e3};
 
-    radiusSquared = (BHx - x)**2 + (BHy - y)**2 ; 
+    radiusSquared = pow((BHx - x),2) + pow((BHy - y),2) ; 
     F = (G*M*m)/radiusSquared;
-    Fx = F*cos(atan2((BHy - y)/(BHx - x))); 
-    Fy = F*sin(atan2((BHy - y)/(BHx - x))); 
-}
+    Fx = F*cos(atan2((BHy - y),(BHx - x))); 
+    Fy = F*sin(atan2((BHy - y),(BHx - x))); 
+   }
 
-void BlackHole::getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, int x, int y) { 
+void BlackHole::getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, int x, int y){ 
     // black hole 1 
     float BH1Fx{0}; // update by reference in computeForece
     float BH1Fy{0}; // update by reference in computeForce 
@@ -33,4 +33,4 @@ void BlackHole::getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, 
 
     Fx = BH1Fx + BH2Fx + BH3Fx; 
     Fy = BH1Fy + BH2Fy + BH3Fy; 
-}
+   }
