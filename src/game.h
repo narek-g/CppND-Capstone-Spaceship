@@ -18,7 +18,7 @@ class Game {
 
  private:
   Snake snake;
-  BlackHole blackHole_test; 
+  BlackHole blackHole; 
   SDL_Point food;
 
   std::random_device dev;
