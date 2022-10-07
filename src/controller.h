@@ -2,7 +2,7 @@
 #define CONTROLLER_H
 
 #include "snake.h"
-#include "black_hole.h"
+#include "blackhole.h"
 
 class Controller {
  public:

@@ -4,7 +4,7 @@
 #include <vector>
 #include "SDL.h"
 #include "snake.h"
-#include "black_hole.h" 
+#include "blackhole.h" 
 
 class Renderer {
  public:

@@ -1,5 +1,5 @@
-#include "black_hole.h"
-#include<cmath> 
+#include "blackhole.h"
+#include <cmath> 
 
 
 void BlackHole::computeForce(float &Fx, float &Fy, int x, int y, int BHx, int BHy){
