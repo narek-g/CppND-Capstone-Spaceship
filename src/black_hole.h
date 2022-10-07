@@ -6,20 +6,19 @@
 class BlackHole {
  public:
 
-  BlackHole()
-    : BH1.x(480), BH1.y(160), 
-    BH2.x(160), BH2.y(320), 
-    BH3.x(480), BH3.y(480), 
+  BlackHole(): BH1x(480), BH1y(160), 
+    BH2x(160), BH2y(320), 
+    BH3x(480), BH3y(480), 
     BHmass(1e5);
     BHradius(50) {}
 
     // location and sizing in pixel space
-    int BH1.x; 
-    int BH1.y; 
-    int BH2.x; 
-    int BH2.y; 
-    int BH3.x;
-    int BH3.y; 
+    int BH1x; 
+    int BH1y; 
+    int BH2x; 
+    int BH2y; 
+    int BH3x;
+    int BH3y; 
     int BHmass; 
     int BHradius; 
  
