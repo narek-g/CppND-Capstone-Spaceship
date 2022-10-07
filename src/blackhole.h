@@ -1,6 +1,7 @@
 #ifndef BLACKHOLE_H
 #define BLACKHOLE_H
 
+#include <iostream>
 
 class BlackHole {
  public:
