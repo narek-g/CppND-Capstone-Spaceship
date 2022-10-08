@@ -4,6 +4,8 @@
 #include <iostream>
 #include "SDL.h"
 
+const float G_CONSTANT{6.67e-11}; 
+
 class BlackHole {
  public:
 
@@ -20,8 +22,8 @@ class BlackHole {
     int BH2y; 
     int BH3x;
     int BH3y; 
-    int BHmass; 
-    int BHradius; 
+    int BHmass; // kg
+    int BHradius; // meters
 
     void getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, int x, int y); 
     void something(){
