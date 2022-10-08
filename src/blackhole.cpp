@@ -3,7 +3,7 @@
 #include <cmath> 
 
 
-void BlackHole::computeForce(float &Fx, float &Fy, int x, int y, int BHx, int BHy){
+void BlackHole::computeForce(BlackHole blackHole, float &Fx, float &Fy, int x, int y, int BHx, int BHy){
     float radiusSquared; 
     float G{6.67e-11}; 
     float F; 

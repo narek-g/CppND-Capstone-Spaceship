@@ -31,7 +31,7 @@ class BlackHole {
  private:
     // expanding ? 
     // void expanding(bool isExpanding); 
-    void computeForce(float &Fx, float &Fy, int x, int y, int BHx, int BHy); 
+    void computeForce(BlackHole blackHole, float &Fx, float &Fy, int x, int y, int BHx, int BHy); 
 };
 
 #endif
