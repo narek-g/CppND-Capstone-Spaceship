@@ -28,6 +28,8 @@ class Snake {
   float head_y;
   std::vector<SDL_Point> body;
 
+  float shipMass{1e3}; // kg 
+
  private:
   void UpdateHead();
   void UpdateBody(SDL_Point &current_cell, SDL_Point &prev_cell);
