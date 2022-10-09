@@ -78,6 +78,6 @@ bool SpaceShip::SnakeCell(int x, int y) {
   return false;
 }
 
-void SpaceShip::getNetForce(spaceship, blackhole){
+void SpaceShip::getNetForce(SpaceShip &spaceship, BlackHole &blackhole){
   // do nothing
 }
