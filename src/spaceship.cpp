@@ -78,5 +78,5 @@ bool SpaceShip::SnakeCell(int x, int y) {
 }
 
 void SpaceShip::getNetForce(){
-  
+  // do nothing
 }
