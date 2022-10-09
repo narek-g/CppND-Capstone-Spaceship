@@ -18,7 +18,7 @@ class Game {
 
  private:
   SpaceShip spaceship;
-  BlackHole blackbole; 
+  BlackHole blackhole; 
   SDL_Point food;
 
   std::random_device dev;
