@@ -5,7 +5,7 @@
 #include "SDL.h"
 #include "controller.h"
 #include "renderer.h"
-#include "snake.h"
+#include "spaceship.h"
 #include "blackhole.h"
 
 class Game {
@@ -17,7 +17,7 @@ class Game {
   int GetSize() const;
 
  private:
-  Snake snake;
+  SpaceShip spaceship;
   BlackHole blackHole; 
   SDL_Point food;
 

@@ -1,16 +1,16 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include "snake.h"
+#include "spaceship.h"
 #include "blackhole.h"
 
 class Controller {
  public:
-  void HandleInput(bool &running, Snake &snake) const;
+  void HandleInput(bool &running, SpaceShip &spaceship) const;
 
  private:
-  void ChangeDirection(Snake &snake, Snake::Direction input,
-                       Snake::Direction opposite) const;
+  void ChangeDirection(SpaceShip &spaceship, SpaceShip::Direction input,
+                       SpaceShip::Direction opposite) const;
 };
 
 #endif

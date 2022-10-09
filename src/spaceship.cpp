@@ -1,8 +1,8 @@
-#include "snake.h"
+#include "spaceship.h"
 #include <cmath>
 #include <iostream>
 
-void Snake::Update() {
+void SpaceShip::Update() {
   SDL_Point prev_cell{
       static_cast<int>(head_x),
       static_cast<int>(
@@ -12,14 +12,14 @@ void Snake::Update() {
       static_cast<int>(head_x),
       static_cast<int>(head_y)};  // Capture the head's cell after updating.
 
-  // Update all of the body vector items if the snake head has moved to a new
+  // Update all of the body vector items if the spaceship head has moved to a new
   // cell.
   if (current_cell.x != prev_cell.x || current_cell.y != prev_cell.y) {
     UpdateBody(current_cell, prev_cell);
   }
 }
 
-void Snake::UpdateHead() {
+void SpaceShip::UpdateHead() {
   switch (direction) {
     case Direction::kUp:
       head_y -= speed;
@@ -38,12 +38,12 @@ void Snake::UpdateHead() {
       break;
   }
 
-  // Wrap the Snake around to the beginning if going off of the screen.
+  // Wrap the SpaceShip around to the beginning if going off of the screen.
   head_x = fmod(head_x + grid_width, grid_width);
   head_y = fmod(head_y + grid_height, grid_height);
 }
 
-void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) {
+void SpaceShip::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) {
   // Add previous head location to vector
   body.push_back(prev_head_cell);
 
@@ -55,7 +55,7 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) 
     size++;
   }
 
-  // Check if the snake has died.
+  // Check if the spaceship has died.
   for (auto const &item : body) {
     if (current_head_cell.x == item.x && current_head_cell.y == item.y) {
       alive = false;
@@ -63,10 +63,10 @@ void Snake::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_cell) 
   }
 }
 
-void Snake::GrowBody() { growing = true; }
+void SpaceShip::GrowBody() { growing = true; }
 
-// Inefficient method to check if cell is occupied by snake.
-bool Snake::SnakeCell(int x, int y) {
+// Inefficient method to check if cell is occupied by spaceship.
+bool SpaceShip::SnakeCell(int x, int y) {
   if (x == static_cast<int>(head_x) && y == static_cast<int>(head_y)) {
     return true;
   }

@@ -1,14 +1,14 @@
-#ifndef SNAKE_H
-#define SNAKE_H
+#ifndef SPACESHIP_H
+#define SPACESHIP_H
 
 #include <vector>
 #include "SDL.h"
 
-class Snake {
+class SpaceShip {
  public:
   enum class Direction { kUp, kDown, kLeft, kRight };
 
-  Snake(int grid_width, int grid_height)
+  SpaceShip(int grid_width, int grid_height)
       : grid_width(grid_width),
         grid_height(grid_height),
         head_x(grid_width / 2),
@@ -17,7 +17,7 @@ class Snake {
   void Update();
 
   void GrowBody();
-  bool SnakeCell(int x, int y);
+  bool SpaceShipCell(int x, int y);
 
   Direction direction = Direction::kUp;
 

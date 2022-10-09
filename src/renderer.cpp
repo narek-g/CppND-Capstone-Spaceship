@@ -16,7 +16,7 @@ Renderer::Renderer(const std::size_t screen_width,
   }
 
   // Create Window
-  sdl_window = SDL_CreateWindow("Snake Game", SDL_WINDOWPOS_CENTERED,
+  sdl_window = SDL_CreateWindow("SpaceShip Game", SDL_WINDOWPOS_CENTERED,
                                 SDL_WINDOWPOS_CENTERED, screen_width,
                                 screen_height, SDL_WINDOW_SHOWN);
 
@@ -50,7 +50,7 @@ void Renderer::drawBlackHole(int centerX, int centerY, int radius){
   }
 }
 
-void Renderer::Render(Snake const snake, BlackHole blackHole, SDL_Point const &food) {
+void Renderer::Render(SpaceShip const spaceship, BlackHole blackHole, SDL_Point const &food) {
   SDL_Rect block;
   block.w = screen_width / grid_width;
   block.h = screen_height / grid_height;
@@ -65,18 +65,18 @@ void Renderer::Render(Snake const snake, BlackHole blackHole, SDL_Point const &f
   block.y = food.y * block.h;
   SDL_RenderFillRect(sdl_renderer, &block);
 
-  // Render snake's body
+  // Render spaceship's body
   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-  for (SDL_Point const &point : snake.body) {
+  for (SDL_Point const &point : spaceship.body) {
     block.x = point.x * block.w;
     block.y = point.y * block.h;
     SDL_RenderFillRect(sdl_renderer, &block);
   }
 
-  // Render snake's head
-  // block.x = static_cast<int>(snake.head_x) * block.w;
-  // block.y = static_cast<int>(snake.head_y) * block.h;
-  // if (snake.alive) {
+  // Render spaceship's head
+  // block.x = static_cast<int>(spaceship.head_x) * block.w;
+  // block.y = static_cast<int>(spaceship.head_y) * block.h;
+  // if (spaceship.alive) {
   //   SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
   // } else {
   //   SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
@@ -91,12 +91,12 @@ void Renderer::Render(Snake const snake, BlackHole blackHole, SDL_Point const &f
   // Render SpaceShip (it's a square, for now)
   BHFx = 0.0; 
   BHFy = 0.0; 
-  block.x = static_cast<int>(snake.head_x) * block.w;
-  block.y = static_cast<int>(snake.head_y) * block.h;
+  block.x = static_cast<int>(spaceship.head_x) * block.w;
+  block.y = static_cast<int>(spaceship.head_y) * block.h;
 
   blackHole.getGravitationalPull(blackHole, BHFx, BHFy, block.x, block.y);
 
-  if (snake.alive) {
+  if (spaceship.alive) {
     SDL_SetRenderDrawColor(sdl_renderer, 0x00, 0x7A, 0xCC, 0xFF);
   } else {
     SDL_SetRenderDrawColor(sdl_renderer, 0xFF, 0x00, 0x00, 0xFF);
@@ -108,6 +108,6 @@ void Renderer::Render(Snake const snake, BlackHole blackHole, SDL_Point const &f
 }
 
 void Renderer::UpdateWindowTitle(int score, int fps) {
-  std::string title{"Snake Score: " + std::to_string(score) + " FPS: " + std::to_string(fps)};
+  std::string title{"SpaceShip Score: " + std::to_string(score) + " FPS: " + std::to_string(fps)};
   SDL_SetWindowTitle(sdl_window, title.c_str());
 }
