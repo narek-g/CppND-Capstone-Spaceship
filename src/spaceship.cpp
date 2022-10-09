@@ -62,7 +62,7 @@ void SpaceShip::UpdateBody(SDL_Point &current_head_cell, SDL_Point &prev_head_ce
   }
 }
 
-void SpaceShip::GrowBody() { growing = true; }
+void SpaceShip::GrowBody() { growing = false; }
 
 // Inefficient method to check if cell is occupied by spaceship.
 bool SpaceShip::SnakeCell(int x, int y) {
