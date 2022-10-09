@@ -18,7 +18,7 @@ class SpaceShip {
 
   void GrowBody();
   bool SnakeCell(int x, int y);
-  void netForce();
+  void getNetForce();
 
   Direction direction = Direction::kUp;
 
