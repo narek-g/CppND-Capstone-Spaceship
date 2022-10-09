@@ -80,7 +80,8 @@ void Game::Update() {
     // PlaceFood();
     // Grow spaceship and increase speed.
     // spaceship.GrowBody();
-    //spaceship.speed += 0.02;
+
+    //spaceship.speed += 0.02; // increases speed everytime food is eaten 
   }
 }
 
