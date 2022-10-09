@@ -15,7 +15,7 @@ class SpaceShip {
         head_x(grid_width / 2),
         head_y(grid_height / 2) {}
 
-  void Update(SpaceShip &spaceship);
+  void Update(SpaceShip &spaceship, BlackHole &blackhole);
 
   void GrowBody();
   bool SnakeCell(int x, int y);

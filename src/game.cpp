@@ -4,7 +4,7 @@
 
 Game::Game(std::size_t grid_width, std::size_t grid_height)
     : spaceship(grid_width, grid_height),
-      blackHole(), 
+      blackhole(), 
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)) {
@@ -26,7 +26,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, spaceship);
     Update();
-    renderer.Render(spaceship, blackHole, food);
+    renderer.Render(spaceship, blackhole, food);
 
     frame_end = SDL_GetTicks();
 
@@ -69,7 +69,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 void Game::Update() {
   if (!spaceship.alive) return;
 
-  spaceship.Update(spaceship);
+  spaceship.Update(spaceship, blackhole);
 
   int new_x = static_cast<int>(spaceship.head_x);
   int new_y = static_cast<int>(spaceship.head_y);
