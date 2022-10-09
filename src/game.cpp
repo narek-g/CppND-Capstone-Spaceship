@@ -69,7 +69,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
 void Game::Update() {
   if (!spaceship.alive) return;
 
-  spaceship.Update();
+  spaceship.Update(spaceship);
 
   int new_x = static_cast<int>(spaceship.head_x);
   int new_y = static_cast<int>(spaceship.head_y);

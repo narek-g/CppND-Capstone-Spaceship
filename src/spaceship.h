@@ -14,10 +14,11 @@ class SpaceShip {
         head_x(grid_width / 2),
         head_y(grid_height / 2) {}
 
-  void Update();
+  void Update(SpaceShip &spaceship);
 
   void GrowBody();
   bool SnakeCell(int x, int y);
+  void netForce()
 
   Direction direction = Direction::kUp;
 
