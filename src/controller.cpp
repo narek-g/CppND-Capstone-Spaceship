@@ -17,22 +17,22 @@ void Controller::HandleInput(bool &running, SpaceShip &spaceship) const {
     } else if (e.type == SDL_KEYDOWN) {
       switch (e.key.keysym.sym) {
         case SDLK_UP:
-          ChangeDirection(SpaceShip, SpaceShip::Direction::kUp,
+          ChangeDirection(spaceship, SpaceShip::Direction::kUp,
                           SpaceShip::Direction::kDown);
           break;
 
         case SDLK_DOWN:
-          ChangeDirection(SpaceShip, SpaceShip::Direction::kDown,
+          ChangeDirection(spaceship, SpaceShip::Direction::kDown,
                           SpaceShip::Direction::kUp);
           break;
 
         case SDLK_LEFT:
-          ChangeDirection(SpaceShip, SpaceShip::Direction::kLeft,
+          ChangeDirection(spaceship, SpaceShip::Direction::kLeft,
                           SpaceShip::Direction::kRight);
           break;
 
         case SDLK_RIGHT:
-          ChangeDirection(SpaceShip, SpaceShip::Direction::kRight,
+          ChangeDirection(spaceship, SpaceShip::Direction::kRight,
                           SpaceShip::Direction::kLeft);
           break;
       }
