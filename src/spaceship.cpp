@@ -7,6 +7,7 @@ void SpaceShip::Update() {
       static_cast<int>(head_x),
       static_cast<int>(head_y)};  // We first capture the head's cell before updating.
   UpdateHead();
+  spaceship.speed += 2; 
   SDL_Point current_cell{
       static_cast<int>(head_x),
       static_cast<int>(head_y)};  // Capture the head's cell after updating.
