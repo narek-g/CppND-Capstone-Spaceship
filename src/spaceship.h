@@ -17,7 +17,7 @@ class SpaceShip {
   void Update();
 
   void GrowBody();
-  bool SpaceShipCell(int x, int y);
+  bool SnakeCell(int x, int y);
 
   Direction direction = Direction::kUp;
 
