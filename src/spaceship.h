@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "SDL.h"
+#include "blackhole.h"
 
 class SpaceShip {
  public:
