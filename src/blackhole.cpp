@@ -6,9 +6,9 @@
 void BlackHole::computeForce(BlackHole blackhole, float &Fx, float &Fy, const int x, const int y, int BHx, int BHy){
     float m{1e3};
 
-    blackhole.radiusSquared = pow((BHx - x),2) + pow((BHy - y),2) ; 
+    radiusSquared = pow((BHx - x),2) + pow((BHy - y),2) ; 
     // F = (G*M*m)/radiusSquared;
-    blackhole.F = (G_CONSTANT*blackhole.BHmass * m)/blackhole.radiusSquared;
+    F = (G_CONSTANT*blackhole.BHmass * m)/radiusSquared;
     Fx = F*cos(atan2((BHy - y),(BHx - x))); 
     Fy = F*sin(atan2((BHy - y),(BHx - x))); 
    }
