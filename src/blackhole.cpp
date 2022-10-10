@@ -3,11 +3,10 @@
 #include <cmath> 
 
 
-void BlackHole::computeForce(BlackHole blackHole, float &Fx, float &Fy, int x, int y, int BHx, int BHy){
+void BlackHole::computeForce(BlackHole blackHole, float &Fx, float &Fy, const int x, const int y, int BHx, int BHy){
     float radiusSquared; 
     float G{6.67e-11}; 
     float F; 
-    float M{1e10};
     float m{1e3};
 
     radiusSquared = pow((BHx - x),2) + pow((BHy - y),2) ; 
@@ -17,7 +16,7 @@ void BlackHole::computeForce(BlackHole blackHole, float &Fx, float &Fy, int x, i
     Fy = F*sin(atan2((BHy - y),(BHx - x))); 
    }
 
-void BlackHole::getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, int x, int y){ 
+void BlackHole::getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, const int x, const int y){ 
     // black hole 1 
     BH1Fx = 0; // update by reference in computeForece
     BH1Fy = 0; // update by reference in computeForce 

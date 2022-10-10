@@ -25,7 +25,7 @@ class BlackHole {
     int BHmass; // kg
     int BHradius; // meters
 
-    void getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, int x, int y); 
+    void getGravitationalPull(BlackHole blackHole, float &Fx, float &Fy, const int x, const int y); 
     void something(){
       std::cout << "Hello \n"; 
     }
@@ -33,7 +33,7 @@ class BlackHole {
  private:
     // expanding ? 
     // void expanding(bool isExpanding); 
-    void computeForce(BlackHole blackHole, float &Fx, float &Fy, int x, int y, int BHx, int BHy); 
+    void computeForce(BlackHole blackHole, float &Fx, float &Fy, const int x, const int y, int BHx, int BHy); 
     // black hole 1 
     float BH1Fx; // update by reference in computeForece
     float BH1Fy; // update by reference in computeForce 
