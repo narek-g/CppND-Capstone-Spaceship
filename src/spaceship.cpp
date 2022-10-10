@@ -82,5 +82,5 @@ void SpaceShip::getNetForce(SpaceShip &spaceship, BlackHole &blackhole){
   // get blackhole forces 
   BHFx = 0.0; 
   BHFy = 0.0; 
-  blackhole.getGravitationalPull(blackHole, BHFx, BHFy, spaceship.head_x, spaceship.head_y);
+  blackhole.getGravitationalPull(blackhole, BHFx, BHFy, spaceship.head_x, spaceship.head_y);
 }
