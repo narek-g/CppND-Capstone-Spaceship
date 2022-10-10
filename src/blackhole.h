@@ -44,7 +44,7 @@ class BlackHole {
     float BH3Fx; // update by reference in computeForece
     float BH3Fy; // update by reference in computeForce 
 
-    float radiusSquared; // used in computeForce calc
+    float radiusSquared{0}; // used in computeForce calc
     float F{0};             // used in computeForce method 
 };
 
