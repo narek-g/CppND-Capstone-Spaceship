@@ -11,8 +11,6 @@ void BlackHole::computeForce(BlackHole blackhole, float &Fx, float &Fy, const in
     F = (G_CONSTANT*blackhole.BHmass * m)/radiusSquared;
     Fx = F*cos(atan2((BHy - y),(BHx - x))); 
     Fy = F*sin(atan2((BHy - y),(BHx - x))); 
-
-    std::cout << BHy - y << " " << BHx - x << "\n";
    }
 
 void BlackHole::getGravitationalPull(BlackHole blackhole, float &Fx, float &Fy, const int x, const int y){ 
