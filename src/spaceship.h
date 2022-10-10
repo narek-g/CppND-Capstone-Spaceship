@@ -39,6 +39,10 @@ class SpaceShip {
   bool growing{false};
   int grid_width;
   int grid_height;
+
+  // blackhole net forces 
+  float BHFx; 
+  float BHFy; 
 };
 
 #endif
