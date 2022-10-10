@@ -4,9 +4,6 @@
 
 
 void BlackHole::computeForce(BlackHole blackhole, float &Fx, float &Fy, const int x, const int y, int BHx, int BHy){
-    float radiusSquared; 
-    float G{6.67e-11}; 
-    float F; 
     float m{1e3};
 
     radiusSquared = pow((BHx - x),2) + pow((BHy - y),2) ; 
