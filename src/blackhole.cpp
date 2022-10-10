@@ -11,7 +11,7 @@ void BlackHole::computeForce(BlackHole blackhole, float &Fx, float &Fy, const in
 
     radiusSquared = pow((BHx - x),2) + pow((BHy - y),2) ; 
     // F = (G*M*m)/radiusSquared;
-    F = (G*blackhole.BHmass * m)/radiusSquared;
+    F = (G_CONSTANT*blackhole.BHmass * m)/radiusSquared;
     Fx = F*cos(atan2((BHy - y),(BHx - x))); 
     Fy = F*sin(atan2((BHy - y),(BHx - x))); 
    }
