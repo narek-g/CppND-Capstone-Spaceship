@@ -79,5 +79,8 @@ bool SpaceShip::SnakeCell(int x, int y) {
 }
 
 void SpaceShip::getNetForce(SpaceShip &spaceship, BlackHole &blackhole){
-  // do nothing
+  // get blackhole forces 
+  BHFx = 0.0; 
+  BHFy = 0.0; 
+  blackHole.getGravitationalPull(blackHole, BHFx, BHFy, spaceship.head_x, spaceship.head_y);
 }
