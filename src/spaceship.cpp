@@ -73,7 +73,7 @@ bool SpaceShip::SnakeCell(int x, int y) {
   for (auto const &item : body) {
     if (x == item.x && y == item.y) {
       return true;
-    }
+    
   }
   return false;
 }
@@ -86,7 +86,7 @@ void SpaceShip::getNetForce(SpaceShip &spaceship, BlackHole &blackhole){
   int delta_x;
   int delta_y; 
   blackhole.getGravitationalPull(blackhole, BHFx, BHFy, spaceship.head_x, spaceship.head_y);
-  delta_x = ( 1e5 * BHFx * pow(t,2) ) / (2 * spaceship.shipMass);
+  delta_x = ( 1e6 * BHFx * pow(t,2) ) / (2 * spaceship.shipMass);
   head_x += delta_x; 
-  std::cout << BHFx << " ---------- " << delta_x << "---------" << head_x << " ----------" << head_y << "\n" ; 
+  std::cout << BHFx << "  " << delta_x << "  " << head_x << "  " << head_y << "\n" ; 
 }
