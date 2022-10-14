@@ -86,7 +86,7 @@ void SpaceShip::getNetForce(SpaceShip &spaceship, BlackHole &blackhole){
   int delta_x;
   int delta_y; 
   blackhole.getGravitationalPull(blackhole, BHFx, BHFy, spaceship.head_x, spaceship.head_y);
-  delta_x = ( 100e6 * BHFx * pow(t,2) ) / (2 * spaceship.shipMass);
+  delta_x = ( 20e6 * BHFx * pow(t,2) ) / (2 * spaceship.shipMass);
   head_x += delta_x; 
   std::cout << BHFx << "  " << delta_x << "  " << head_x << "  " << head_y << "\n" ; 
 }
