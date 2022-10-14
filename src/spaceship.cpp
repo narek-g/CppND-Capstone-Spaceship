@@ -73,7 +73,7 @@ bool SpaceShip::SnakeCell(int x, int y) {
   for (auto const &item : body) {
     if (x == item.x && y == item.y) {
       return true;
-    
+    }
   }
   return false;
 }
