@@ -15,6 +15,7 @@ class Game {
            std::size_t target_frame_duration);
   int GetScore() const;
   int GetSize() const;
+  float frameRate{500}; // 500 miliseconds
 
  private:
   SpaceShip spaceship;
