@@ -19,7 +19,7 @@ class SpaceShip {
 
   void GrowBody();
   bool SnakeCell(int x, int y);
-  void getNetForce(SpaceShip &spaceship, BlackHole &blackhole);
+  void getNetForce(BlackHole &blackhole);
 
   Direction direction = Direction::kUp;
 
