@@ -6,7 +6,7 @@ void SpaceShip::Update(SpaceShip &spaceship, BlackHole &blackhole) {
   SDL_Point prev_cell{
       static_cast<int>(head_x),
       static_cast<int>(head_y)};  // We first capture the head's cell before updating.
-  getNetForce(blackhole); 
+  getNetForce(spaceship, blackhole); 
   UpdateHead();
   SDL_Point current_cell{
       static_cast<int>(head_x),
@@ -78,7 +78,7 @@ bool SpaceShip::SnakeCell(int x, int y) {
   return false;
 }
 
-void SpaceShip::getNetForce(BlackHole &blackhole){
+void SpaceShip::getNetForce(SpaceShip &spaceship, BlackHole &blackhole){
   // get blackhole forces 
   BHFx = 0.0; 
   BHFy = 0.0; 
