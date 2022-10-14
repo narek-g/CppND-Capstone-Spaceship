@@ -36,7 +36,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     frame_duration = frame_end - frame_start;
 
     // After every helf second, update the window title.
-    if (frame_end - title_timestamp >= 500) {
+    if (frame_end - title_timestamp >= frameRate) {
       renderer.UpdateWindowTitle(score, frame_count);
       frame_count = 0;
       title_timestamp = frame_end;
