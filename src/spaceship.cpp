@@ -91,5 +91,5 @@ void SpaceShip::getNetForce(SpaceShip &spaceship, BlackHole &blackhole){
   delta_y = ( FORCE_STRENGTH * BHFy * pow(t,2) ) / (2 * spaceship.shipMass);
   head_x += delta_x; 
   head_y += delta_y; 
-  std::cout << BHFx << "  " << delta_x << "  " << head_x << "  " << head_y << "\n" ; 
+  std::cout << BHFx << "  " << BHFy << "  " << delta_x << "  " << delta_y << "  " << head_x << "  " << head_y << "\n" ; 
 }
