@@ -8,6 +8,7 @@
 class SpaceShip {
  public:
   enum class Direction { kUp, kDown, kLeft, kRight };
+  enum class Impulse { kUp, kDown, kLeft, kRight }; 
 
   SpaceShip(int grid_width, int grid_height)
       : grid_width(grid_width),
