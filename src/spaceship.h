@@ -8,7 +8,7 @@
 class SpaceShip {
  public:
   enum class Direction { kUp, kDown, kLeft, kRight };
-  enum class Impulse { kUp, kDown, kLeft, kRight }; 
+  enum class Impulse { kZero, kUp, kDown, kLeft, kRight }; 
 
   SpaceShip(int grid_width, int grid_height)
       : grid_width(grid_width),
@@ -23,6 +23,7 @@ class SpaceShip {
   void getNetForce(SpaceShip &spaceship, BlackHole &blackhole);
 
   Direction direction = Direction::kUp;
+  Impulse impulse = Impulse::kZero; 
 
   float speed{0.1f};
   int size{1};
