@@ -17,8 +17,7 @@ void Controller::HandleInput(bool &running, SpaceShip &spaceship) const {
     } else if (e.type == SDL_KEYDOWN) {
       switch (e.key.keysym.sym) {
         case SDLK_UP:
-          ChangeDirection(spaceship, SpaceShip::Direction::kUp,
-                          SpaceShip::Direction::kDown);
+          spaceship.impulse = SpaceShip::Impulse::kUp; 
           break;
 
         case SDLK_DOWN:
