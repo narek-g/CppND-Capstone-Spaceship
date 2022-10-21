@@ -9,6 +9,22 @@ void Controller::ChangeDirection(SpaceShip &spaceship, SpaceShip::Direction inpu
   return;
 }
 
+void Controll::UpdateNetForces(SpaceShip &spaceship, SpaceShip::Impulse input) {
+  if (input == SpaceShip::Impulse::kUp){
+    spaceship.netYForce += spaceship.impulseForce; 
+  }
+  else if (input == SpaceShip::Impulse::kDown){
+    spaceship.netYForce -= spaceship.impulseForce; 
+  }
+  else if (input == SpaceShip::Impulse::kLeft){
+    spaceship.netXForce -= spaceship.impulseForce; 
+  }
+  else if (input == SpaceShip::Impulse::kRight){
+    spaceship.netXForce += spaceship.impulseForce; 
+  }
+  return
+}
+
 void Controller::HandleInput(bool &running, SpaceShip &spaceship) const {
   SDL_Event e;
   while (SDL_PollEvent(&e)) {
@@ -17,7 +33,7 @@ void Controller::HandleInput(bool &running, SpaceShip &spaceship) const {
     } else if (e.type == SDL_KEYDOWN) {
       switch (e.key.keysym.sym) {
         case SDLK_UP:
-          spaceship.impulse = SpaceShip::Impulse::kUp; 
+          UpdateNetForces(spaceship, SpaceShip::Impulse::kUp);
           break;
 
         case SDLK_DOWN:
