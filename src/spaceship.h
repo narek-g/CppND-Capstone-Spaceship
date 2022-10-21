@@ -33,6 +33,8 @@ class SpaceShip {
   std::vector<SDL_Point> body;
 
   float shipMass{1e3}; // kg 
+  float netXForce{0};  // Newtons 
+  float netYForce{0};  // Newtons 
 
  private:
   void UpdateHead();
