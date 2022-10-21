@@ -71,18 +71,18 @@ void Game::Update() {
 
   spaceship.Update(spaceship, blackhole);
 
-  int new_x = static_cast<int>(spaceship.head_x);
-  int new_y = static_cast<int>(spaceship.head_y);
+  // int new_x = static_cast<int>(spaceship.head_x);
+  // int new_y = static_cast<int>(spaceship.head_y);
 
-  // Check if there's food over here
-  if (food.x == new_x && food.y == new_y) {
-    score++;
-    // PlaceFood();
-    // Grow spaceship and increase speed.
-    // spaceship.GrowBody();
+  // // Check if there's food over here
+  // if (food.x == new_x && food.y == new_y) {
+  //   score++;
+  //   // PlaceFood();
+  //   // Grow spaceship and increase speed.
+  //   // spaceship.GrowBody();
 
-    //spaceship.speed += 0.02; // increases speed everytime food is eaten 
-  }
+  //   //spaceship.speed += 0.02; // increases speed everytime food is eaten 
+  // }
 }
 
 int Game::GetScore() const { return score; }
