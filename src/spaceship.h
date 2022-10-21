@@ -32,10 +32,10 @@ class SpaceShip {
   float head_y;
   std::vector<SDL_Point> body;
 
-  float shipMass{1e3}; // kg 
-  float netXForce{0};  // Newtons 
-  float netYForce{0};  // Newtons 
-  int impulseForce{10}; // 
+  float shipMass{1e3};    // kg 
+  float netXForce{0};     // Newtons 
+  float netYForce{0};     // Newtons 
+  int impulseForce{10};   // Newtons 
 
  private:
   void UpdateHead();
