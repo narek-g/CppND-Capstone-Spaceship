@@ -12,7 +12,7 @@ class Controller {
   void ChangeDirection(SpaceShip &spaceship, SpaceShip::Direction input,
                        SpaceShip::Direction opposite) const;
 
-  void UpdateNetForces(SpaceShip &spaceship, SpaceShip::Impulse input);
+  void UpdateNetForces(SpaceShip &spaceship, SpaceShip::Impulse input) const;
 };
 
 #endif
