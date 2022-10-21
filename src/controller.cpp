@@ -9,7 +9,7 @@ void Controller::ChangeDirection(SpaceShip &spaceship, SpaceShip::Direction inpu
   return;
 }
 
-void Controll::UpdateNetForces(SpaceShip &spaceship, SpaceShip::Impulse input) {
+void Controller::UpdateNetForces(SpaceShip &spaceship, SpaceShip::Impulse input) {
   if (input == SpaceShip::Impulse::kUp){
     spaceship.netYForce += spaceship.impulseForce; 
   }

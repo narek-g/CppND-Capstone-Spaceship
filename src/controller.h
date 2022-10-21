@@ -11,6 +11,7 @@ class Controller {
  private:
   void ChangeDirection(SpaceShip &spaceship, SpaceShip::Direction input,
                        SpaceShip::Direction opposite) const;
+  void Controller::UpdateNetForces(SpaceShip &spaceship, SpaceShip::Impulse input);
 };
 
 #endif
