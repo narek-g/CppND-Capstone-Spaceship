@@ -22,7 +22,7 @@ void Controll::UpdateNetForces(SpaceShip &spaceship, SpaceShip::Impulse input) {
   else if (input == SpaceShip::Impulse::kRight){
     spaceship.netXForce += spaceship.impulseForce; 
   }
-  return
+  return;
 }
 
 void Controller::HandleInput(bool &running, SpaceShip &spaceship) const {
