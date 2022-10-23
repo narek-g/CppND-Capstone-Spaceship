@@ -20,6 +20,7 @@ void SpaceShip::Update(SpaceShip &spaceship, BlackHole &blackhole) {
 }
 
 void SpaceShip::UpdateHead() {
+  // defines new location after force updates and calculations 
   switch (direction) {
     case Direction::kUp:
       head_y -= speed;
