@@ -37,18 +37,21 @@ void Controller::HandleInput(bool &running, SpaceShip &spaceship) const {
           break;
 
         case SDLK_DOWN:
-          ChangeDirection(spaceship, SpaceShip::Direction::kDown,
-                          SpaceShip::Direction::kUp);
+          // ChangeDirection(spaceship, SpaceShip::Direction::kDown,
+          //                 SpaceShip::Direction::kUp);
+          UpdateNetForces(spaceship, SpaceShip::Impulse::kDown);
           break;
 
         case SDLK_LEFT:
-          ChangeDirection(spaceship, SpaceShip::Direction::kLeft,
-                          SpaceShip::Direction::kRight);
+          // ChangeDirection(spaceship, SpaceShip::Direction::kLeft,
+          //                 SpaceShip::Direction::kRight);
+          UpdateNetForces(spaceship, SpaceShip::Impulse::kLeft);
           break;
 
         case SDLK_RIGHT:
-          ChangeDirection(spaceship, SpaceShip::Direction::kRight,
-                          SpaceShip::Direction::kLeft);
+          // ChangeDirection(spaceship, SpaceShip::Direction::kRight,
+          //                 SpaceShip::Direction::kLeft);
+          UpdateNetForces(spaceship, SpaceShip::Impulse::kRight);
           break;
       }
     }
