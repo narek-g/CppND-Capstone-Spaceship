@@ -2,7 +2,7 @@
 
 Capstone project for [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
 
-<img src="snake_game.gif"/>
+<!-- <img src="snake_game.gif"/> -->
 
 The Spaceship Exploration project demonstrates various C++ methodologies learend thoughout the nanodegree program, such as: 
 * Object oriented design 
