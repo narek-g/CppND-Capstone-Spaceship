@@ -21,7 +21,6 @@ void SpaceShip::Update(SpaceShip &spaceship, BlackHole &blackhole) {
 
 void SpaceShip::UpdateHead() {
   // defines new location after force updates and calculations 
-  std::cout << netXForce << " " << netYForce << "\n"; 
   switch (direction) {
     case Direction::kUp:
       head_y -= speed;
