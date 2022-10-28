@@ -39,8 +39,8 @@ void SpaceShip::UpdateHead() {
   //     break;
   // }
 
-  delta_x = ( BHFx * pow(t,2) ) / (2 * spaceship.shipMass);
-  delta_y = ( BHFy * pow(t,2) ) / (2 * spaceship.shipMass);
+  delta_x = ( BHFx * pow(t,2) ) / (2 * shipMass);
+  delta_y = ( BHFy * pow(t,2) ) / (2 * shipMass);
   head_x += delta_x; 
   head_y += delta_y; 
 
