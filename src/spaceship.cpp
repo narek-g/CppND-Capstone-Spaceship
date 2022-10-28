@@ -43,7 +43,7 @@ void SpaceShip::UpdateHead() {
   delta_y = ( (netYForce + BHFy) * pow(t,2) ) / (2 * shipMass);
   head_x += delta_x; 
   head_y += delta_y; 
-  std::cout << BHFx << "," << BHFy << "," << delta_x << "," << delta_y << "," << netXForce << "," << netYForce << "\n";
+  std::cout << delta_x << "," << delta_y << "," << netXForce << "," << netYForce << "\n";
   // Wrap the SpaceShip around to the beginning if going off of the screen.
   head_x = fmod(head_x + grid_width, grid_width);
   head_y = fmod(head_y + grid_height, grid_height);
