@@ -42,7 +42,7 @@ void SpaceShip::UpdateHead() {
   delta_x = ( (netXForce + BHFx) * pow(t,2) ) / (2 * shipMass);
   delta_y = ( (netYForce + BHFy) * pow(t,2) ) / (2 * shipMass);
   head_x += delta_x; 
-  head_y += (-1) * delta_y; 
+  head_y += (-1) * delta_y; // flip direction as up/down direction are relative to cpp renderer 
   std::cout << delta_x << "," << delta_y << "," << netXForce << "," << netYForce << "\n";
   // Wrap the SpaceShip around to the beginning if going off of the screen.
   head_x = fmod(head_x + grid_width, grid_width);
