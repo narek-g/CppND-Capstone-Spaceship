@@ -71,8 +71,8 @@ void Game::Update() {
 
   spaceship.Update(spaceship, blackhole);
 
-  // int new_x = static_cast<int>(spaceship.head_x);
-  // int new_y = static_cast<int>(spaceship.head_y);
+  int new_x = static_cast<int>(spaceship.head_x);
+  int new_y = static_cast<int>(spaceship.head_y);
 
   // Check if there's food over here
   if (food.x == new_x && food.y == new_y) {
