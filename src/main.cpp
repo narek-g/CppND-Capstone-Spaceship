@@ -4,13 +4,13 @@
 #include "renderer.h"
 
 int main() {
-  const float screenRatio{1.5};
-  const std::size_t kFramesPerSecond{20};
-  const std::size_t kMsPerFrame{1000 / kFramesPerSecond};
-  const std::size_t kScreenWidth{640};
-  const std::size_t kScreenHeight{640};
-  const std::size_t kGridWidth{screenRatio*32};
-  const std::size_t kGridHeight{screenRatio*32};
+  const int screenRatio{1};
+  constexpr std::size_t kFramesPerSecond{20};
+  constexpr std::size_t kMsPerFrame{1000 / kFramesPerSecond};
+  constexpr std::size_t kScreenWidth{640};
+  constexpr std::size_t kScreenHeight{640};
+  constexpr std::size_t kGridWidth{screenRatio*32};
+  constexpr std::size_t kGridHeight{screenRatio*32};
 
   // consider adding black hole values here as constants? 
 
