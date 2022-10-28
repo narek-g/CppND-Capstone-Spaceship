@@ -12,7 +12,7 @@ class BlackHole {
   BlackHole(): BH1x(480), BH1y(160), 
     BH2x(160), BH2y(320), 
     BH3x(480), BH3y(480), 
-    BHmass(1e10),
+    BHmass(1e11),
     BHradius(50) {}
 
     // location and sizing in pixel space
