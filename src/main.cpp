@@ -7,8 +7,8 @@ int main() {
   const int screenRatio{2};
   constexpr std::size_t kFramesPerSecond{20};
   constexpr std::size_t kMsPerFrame{1000 / kFramesPerSecond};
-  constexpr std::size_t kScreenWidth{screenRatio*640};
-  constexpr std::size_t kScreenHeight{screenRatio*640};
+  constexpr std::size_t kScreenWidth{640};
+  constexpr std::size_t kScreenHeight{640};
   constexpr std::size_t kGridWidth{screenRatio*32};
   constexpr std::size_t kGridHeight{screenRatio*32};
 
