@@ -58,11 +58,11 @@ void Game::PlaceFood() {
     y = random_h(engine);
     // Check that the location is not occupied by a spaceship item before placing
     // food.
-    if (!spaceship.SnakeCell(x, y)) {
-      food.x = x;
-      food.y = y;
-      return;
-    }
+    // if (!spaceship.SnakeCell(x, y)) {
+    //   food.x = x;
+    //   food.y = y;
+    //   return;
+    // }
   }
 }
 
