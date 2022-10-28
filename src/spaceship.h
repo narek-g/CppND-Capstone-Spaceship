@@ -46,8 +46,8 @@ class SpaceShip {
   int grid_height;
 
   // blackhole net forces 
-  float BHFx; 
-  float BHFy; 
+  float BHFx{0}; 
+  float BHFy{0}; 
 
   float t{100}; // time interval (frameRate) - better to pass?
   double FORCE_STRENGTH{3e6}; // constant 
