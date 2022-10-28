@@ -33,7 +33,7 @@ class BlackHole {
  private:
     // expanding ? 
     // void expanding(bool isExpanding); 
-    void computeForce(BlackHole blackhole, float &Fx, float &Fy, const int x, const int y, int BHx, int BHy); 
+    void computeForce(float &Fx, float &Fy, const int x, const int y, int BHx, int BHy); 
     // black hole 1 
     float BH1Fx; // update by reference in computeForece
     float BH1Fy; // update by reference in computeForce 
