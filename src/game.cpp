@@ -63,6 +63,9 @@ void Game::PlaceFood() {
     //   food.y = y;
     //   return;
     // }
+    food.x = x;
+    food.y = y;
+    return;
   }
 }
 
