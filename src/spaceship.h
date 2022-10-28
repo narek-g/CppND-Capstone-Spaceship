@@ -49,7 +49,7 @@ class SpaceShip {
   float BHFx; 
   float BHFy; 
 
-  float t{100}; // time interval (frameRate) - better to pass 
+  float t{100}; // time interval (frameRate) - better to pass?
   double FORCE_STRENGTH{3e6}; // constant 
   int delta_x{0};
   int delta_y{0}; 
