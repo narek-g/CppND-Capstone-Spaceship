@@ -77,7 +77,8 @@ void Game::Update() {
   // Check if there's food over here
   if (food.x == new_x && food.y == new_y) {
     score++;
-  PlaceFood();
+    PlaceFood();
+  }
   //   // Grow spaceship and increase speed.
   //   // spaceship.GrowBody();
 
