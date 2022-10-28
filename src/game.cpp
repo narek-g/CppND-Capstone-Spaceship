@@ -51,20 +51,20 @@ void Game::Run(Controller const &controller, Renderer &renderer,
   }
 }
 
-// void Game::PlaceFood() {
-//   int x, y;
-//   while (true) {
-//     x = random_w(engine);
-//     y = random_h(engine);
-//     // Check that the location is not occupied by a spaceship item before placing
-//     // food.
-//     if (!spaceship.SnakeCell(x, y)) {
-//       food.x = x;
-//       food.y = y;
-//       return;
-//     }
-//   }
-// }
+void Game::PlaceFood() {
+  int x, y;
+  while (true) {
+    x = random_w(engine);
+    y = random_h(engine);
+    // Check that the location is not occupied by a spaceship item before placing
+    // food.
+    if (!spaceship.SnakeCell(x, y)) {
+      food.x = x;
+      food.y = y;
+      return;
+    }
+  }
+}
 
 void Game::Update() {
   if (!spaceship.alive) return;
@@ -74,10 +74,10 @@ void Game::Update() {
   // int new_x = static_cast<int>(spaceship.head_x);
   // int new_y = static_cast<int>(spaceship.head_y);
 
-  // // Check if there's food over here
-  // if (food.x == new_x && food.y == new_y) {
-  //   score++;
-  //   // PlaceFood();
+  // Check if there's food over here
+  if (food.x == new_x && food.y == new_y) {
+    score++;
+  PlaceFood();
   //   // Grow spaceship and increase speed.
   //   // spaceship.GrowBody();
 
