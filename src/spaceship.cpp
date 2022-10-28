@@ -21,23 +21,28 @@ void SpaceShip::Update(SpaceShip &spaceship, BlackHole &blackhole) {
 
 void SpaceShip::UpdateHead() {
   // defines new location after force updates and calculations 
-  switch (direction) {
-    case Direction::kUp:
-      head_y -= speed;
-      break;
+  // switch (direction) {
+  //   case Direction::kUp:
+  //     head_y -= speed;
+  //     break;
 
-    case Direction::kDown:
-      head_y += speed;
-      break;
+  //   case Direction::kDown:
+  //     head_y += speed;
+  //     break;
 
-    case Direction::kLeft:
-      head_x -= speed;
-      break;
+  //   case Direction::kLeft:
+  //     head_x -= speed;
+  //     break;
 
-    case Direction::kRight:
-      head_x += speed;
-      break;
-  }
+  //   case Direction::kRight:
+  //     head_x += speed;
+  //     break;
+  // }
+
+  delta_x = ( BHFx * pow(t,2) ) / (2 * spaceship.shipMass);
+  delta_y = ( BHFy * pow(t,2) ) / (2 * spaceship.shipMass);
+  head_x += delta_x; 
+  head_y += delta_y; 
 
   // Wrap the SpaceShip around to the beginning if going off of the screen.
   head_x = fmod(head_x + grid_width, grid_width);
@@ -83,14 +88,6 @@ void SpaceShip::getNetForce(SpaceShip &spaceship, BlackHole &blackhole){
   // get blackhole forces 
   BHFx = 0.0; 
   BHFy = 0.0; 
-  float t = 100; // time interval (frameRate) - better to pass 
-  double FORCE_STRENGTH = 3e6; // constant 
-  int delta_x;
-  int delta_y; 
   blackhole.getGravitationalPull(blackhole, BHFx, BHFy, spaceship.head_x, spaceship.head_y);
-  delta_x = ( BHFx * pow(t,2) ) / (2 * spaceship.shipMass);
-  delta_y = ( BHFy * pow(t,2) ) / (2 * spaceship.shipMass);
-  head_x += delta_x; 
-  head_y += delta_y; 
   // std::cout << BHFx << "  " << BHFy << "  " << delta_x << "  " << delta_y << "  " << head_x << "  " << head_y << "\n" ; 
 }
