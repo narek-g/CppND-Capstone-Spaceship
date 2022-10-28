@@ -35,7 +35,7 @@ class SpaceShip {
   float shipMass{1e3};    // kg 
   float netXForce{0};     // Newtons 
   float netYForce{0};     // Newtons 
-  int impulseForce{10};   // Newtons 
+  int impulseForce{0.1}};   // Newtons 
 
  private:
   void UpdateHead();
