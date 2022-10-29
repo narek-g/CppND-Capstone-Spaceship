@@ -4,11 +4,16 @@ Capstone project for [Udacity C++ Nanodegree Program](https://www.udacity.com/co
 
 <!-- <img src="snake_game.gif"/> -->
 
+# CPPND Project Rubric 
 The Spaceship Exploration project demonstrates various C++ methodologies learend thoughout the nanodegree program, such as: 
 * Object oriented design 
-  * Specifically, encapsulation
+  * Specifically, encapsulation used for new Black Hole object, 
+  * In addition to constructors, public and private declerations. 
+* I/O
+  * Accepting user inputs to process the game
 * Concurency (multi-threading)
 * Memory management
+  * Using references in function declerations 
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
