@@ -16,7 +16,7 @@ Good luck!
 ## CPPND Project Rubric 
 The Spaceship Exploration project demonstrates various C++ methodologies learend thoughout the nanodegree program, such as: 
 * Object oriented design 
-  * Specifically, encapsulation used for new Black Hole object, 
+  * Specifically, encapsulation used for new Black Hole object and expansion of the SpaceShip object (formally Snake)
   * In addition to constructors, public and private declerations. 
 * I/O
   * Accepting user inputs to process the game
