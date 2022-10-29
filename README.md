@@ -20,7 +20,7 @@ The Spaceship Exploration project demonstrates various C++ methodologies learend
   * In addition to constructors, public and private declerations. 
 * I/O
   * Accepting user inputs to process the game
-* Concurency (multi-threading)
+<!-- * Concurency (multi-threading) -->
 * Memory management
   * Using references in function declerations 
 
