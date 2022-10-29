@@ -4,6 +4,15 @@ Capstone project for [Udacity C++ Nanodegree Program](https://www.udacity.com/co
 
 <!-- <img src="snake_game.gif"/> -->
 
+# How to Play
+The game is inspired by the classical snake game, except, the user is in control of a spaceship. In space, once you are in motion, you remain in motion until another force is applied (Newtons first law). The user applies a force using the arrow keys. Each press, incrementally adds an impulse in the opposite direction of the arrow (want to go up, press up and a force is applied downwards). 
+
+The goal, is for the user to regain control of the spaceship and collect the food items (orange blocks).
+
+To make the game more interesting, there are black holes in space (don't worry, they won't swallow the spaceship), which will alter the users control of the spaceship as they exhibit an external force. 
+
+Good luck! 
+
 # CPPND Project Rubric 
 The Spaceship Exploration project demonstrates various C++ methodologies learend thoughout the nanodegree program, such as: 
 * Object oriented design 
@@ -14,15 +23,6 @@ The Spaceship Exploration project demonstrates various C++ methodologies learend
 * Concurency (multi-threading)
 * Memory management
   * Using references in function declerations 
-
-# How to Play
-The game is inspired by the classical snake game, except, the user is in control of a spaceship. In space, once you are in motion, you remain in motion until another force is applied (Newtons first law). The user applies a force using the arrow keys. Each press, incrementally adds an impulse in the opposite direction of the arrow (want to go up, press up and a force is applied downwards). 
-
-The goal, is for the user to regain control of the spaceship and collect the food items (orange blocks).
-
-To make the game more interesting, there are black holes in space (don't worry, they won't swallow the spaceship), which will alter the users control of the spaceship as they exhibit an external force. 
-
-Good luck! 
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
